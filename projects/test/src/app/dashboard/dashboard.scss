@@ -1,0 +1,47 @@
+.dashboard-layout {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+
+/* TARGET PANEL */
+.target-panel {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* BUTTON – smaller & clean */
+.open-target-btn {
+  align-self: flex-start;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #8e2de2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.open-target-btn:hover {
+  background-color: #7325c9;
+}
+
+/* COMMON CARD STYLE */
+.dashboard-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+/* LEFT & RIGHT PANELS */
+.left-card {
+  width: 30%;
+}
+
+.right-card {
+  flex: 1;
+}

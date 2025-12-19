@@ -1,0 +1,13 @@
+<button
+  [type]="type"
+  class="lib-btn"
+  [ngClass]="'lib-btn-' + variant"
+  [disabled]="disabled"
+  (click)="onClick()"
+>
+  <span *ngIf="icon" class="material-icons lib-btn-icon">
+    {{ icon }}
+  </span>
+
+  {{ label }}
+</button>

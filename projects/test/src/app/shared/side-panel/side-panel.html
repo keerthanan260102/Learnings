@@ -1,0 +1,28 @@
+<!-- <nav class="side-panel">
+  <ul>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/menu1">Menu 1</a></li>
+    <li><a routerLink="/menu2">Menu 2</a></li>
+  </ul>
+</nav> -->
+
+
+<nav class="side-panel">
+  <ul>
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        Dashboard
+      </a>
+    </li>
+    <li>
+      <a routerLink="/menu1" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        Menu 1
+      </a>
+    </li>
+    <li>
+      <a routerLink="/menu2" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        Menu 2
+      </a>
+    </li>
+  </ul>
+</nav>

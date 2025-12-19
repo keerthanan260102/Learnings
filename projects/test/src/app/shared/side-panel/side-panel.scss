@@ -1,0 +1,36 @@
+.side-panel {
+  padding: 16px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 8px;
+
+        &:hover {
+          color: #fff;
+          background-color: #8E2DE2;
+        }
+
+        &.active-link {
+          color: #fff;
+          background-color: #8E2DE2;
+        }
+      }
+    }
+
+    /* 👇 DEFAULT DASHBOARD ACTIVE (when no route is active) */
+    &:not(:has(a.active-link)) li:first-child a {
+      color: #fff;
+      background-color: #8E2DE2;
+    }
+  }
+}

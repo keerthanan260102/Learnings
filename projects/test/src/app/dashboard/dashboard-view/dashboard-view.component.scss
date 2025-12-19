@@ -1,0 +1,57 @@
+.dashboard-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.metric-card {
+  border-radius: 12px;
+  padding: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  min-height: 150px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  h6, h3 {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.chart-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.chart-placeholder {
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #4e73df, #224abe);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #1cc88a, #138f74);
+}
+
+.bg-gradient-danger {
+  background: linear-gradient(135deg, #e74a3b, #b32d1f);
+}
+
+.bg-gradient-info {
+  background: linear-gradient(135deg, #36b9cc, #1a758a);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #f6c23e, #d4a11a);
+  color: #212529 !important;
+}

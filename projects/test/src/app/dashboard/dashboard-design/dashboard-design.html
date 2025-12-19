@@ -1,0 +1,12 @@
+<h3>Design Dashboards</h3>
+
+<div class="dashboard-cards">
+  <div
+    class="dashboard-card"
+    *ngFor="let d of dashboards"
+    (click)="selectDashboard(d.id)"
+    [class.active]="selectedId === d.id"
+  >
+    {{ d.title }}
+  </div>
+</div>

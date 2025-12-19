@@ -1,0 +1,37 @@
+<div class="dashboard-layout">
+  <!-- TARGET AREA -->
+  <!-- BUTTON -->
+  <!-- <button class="open-target-btn" (click)="isTargetOpen = !isTargetOpen">
+    {{ isTargetOpen ? 'Close' : 'Open' }}
+  </button>
+  <div class="target-panel" *ngIf="isTargetOpen">
+    <app-target></app-target>
+  </div> -->
+
+  <!-- TARGET PANEL -->
+  <div class="target-panel">
+    <button class="open-target-btn" (click)="openTargetComponent()">
+      Open
+    </button>
+    <router-outlet name="target" *ngIf="isTargetOpen"></router-outlet>
+    <button
+      class="open-target-btn"
+      *ngIf="isTargetOpen"
+      (click)="closeTargetComponent()"
+    >
+      Close
+    </button>
+  </div>
+
+  <!-- LEFT CARD -->
+  <div class="dashboard-card left-card">
+    <app-dashboard-design (dashboardSelected)="onDashboardSelect($event)">
+    </app-dashboard-design>
+  </div>
+
+  <!-- RIGHT CARD -->
+  <div class="dashboard-card right-card">
+    <app-dashboard-analysis [dashboardId]="selectedDashboardId">
+    </app-dashboard-analysis>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .content-wrapper {
+    display: flex;
+    flex: 1;
+
+    app-side-panel {
+      width: 250px;
+      background-color: #f5f5f5;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 16px;
+    }
+  }
+}

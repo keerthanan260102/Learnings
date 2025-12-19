@@ -1,0 +1,43 @@
+.lib-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Variants */
+.lib-btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.lib-btn-secondary {
+  background: #6b7280;
+  color: #fff;
+}
+
+.lib-btn-danger {
+  background: #dc2626;
+  color: #fff;
+}
+
+/* Hover */
+.lib-btn:not(:disabled):hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled */
+.lib-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Icon */
+.lib-btn-icon {
+  font-size: 18px;
+}

@@ -1,0 +1,177 @@
+<div class="dashboard-layout p-4">
+
+  <!-- BACK BUTTON -->
+  <lib-my-button
+    label="Back to Dashboard"
+    icon="chevron_left"
+    variant="secondary"
+    (clicked)="goBack()"
+    class="mb-4"
+  ></lib-my-button>
+
+  <!-- DASHBOARD CARDS -->
+  <div class="dashboard-card right-card p-4">
+
+    <!-- SALES DASHBOARD -->
+    <div *ngIf="selectedDashboardId === '1'">
+      <h3 class="mb-4 text-primary">📊 Sales Dashboard</h3>
+
+      <!-- Top Metrics -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-primary text-white h-100 p-4">
+            <h6 class="text-center">Total Sales</h6>
+            <h3 class="text-center">$12,450</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-success text-white h-100 p-4">
+            <h6 class="text-center">New Leads</h6>
+            <h3 class="text-center">128</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-warning text-dark h-100 p-4">
+            <h6 class="text-center">Conversion Rate</h6>
+            <h3 class="text-center">18%</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card chart-card p-4">
+            <h6 class="mb-3">Monthly Sales</h6>
+            <div class="chart-placeholder text-center py-5">
+              [Chart goes here]
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card chart-card p-4">
+            <h6 class="mb-3">Top Products</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Product A <span class="badge bg-primary rounded-pill">250</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Product B <span class="badge bg-success rounded-pill">180</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Product C <span class="badge bg-warning rounded-pill">120</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCE DASHBOARD -->
+    <div *ngIf="selectedDashboardId === '2'">
+      <h3 class="mb-4 text-success">💰 Finance Dashboard</h3>
+
+      <!-- Top Metrics -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-success text-white h-100 p-4">
+            <h6 class="text-center">Revenue</h6>
+            <h3 class="text-center">$98,760</h3>
+            <div class="progress mt-2" style="height: 8px">
+              <div class="progress-bar bg-light" role="progressbar" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-danger text-white h-100 p-4">
+            <h6 class="text-center">Expenses</h6>
+            <h3 class="text-center">$56,430</h3>
+            <div class="progress mt-2" style="height: 8px">
+              <div class="progress-bar bg-light" role="progressbar" style="width: 50%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-info text-white h-100 p-4">
+            <h6 class="text-center">Profit</h6>
+            <h3 class="text-center">$42,330</h3>
+            <div class="progress mt-2" style="height: 8px">
+              <div class="progress-bar bg-light" role="progressbar" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card chart-card p-4">
+            <h6 class="mb-3">Cash Flow</h6>
+            <div class="chart-placeholder text-center py-5">[Chart]</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card chart-card p-4">
+            <h6 class="mb-3">Expense Breakdown</h6>
+            <div class="chart-placeholder text-center py-5">[Pie Chart]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARKETING DASHBOARD -->
+    <div *ngIf="selectedDashboardId === '3'">
+      <h3 class="mb-4 text-warning">📣 Marketing Dashboard</h3>
+
+      <!-- Top Metrics -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-warning text-dark h-100 p-4">
+            <h6 class="text-center">Campaigns</h6>
+            <h3 class="text-center">24</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-primary text-white h-100 p-4">
+            <h6 class="text-center">Leads Generated</h6>
+            <h3 class="text-center">340</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card metric-card bg-gradient-success text-white h-100 p-4">
+            <h6 class="text-center">Engagement Rate</h6>
+            <h3 class="text-center">12%</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card chart-card p-4">
+            <h6 class="mb-3">Top Campaigns</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Email Marketing <span class="badge bg-primary rounded-pill">120 Leads</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Social Media Ads <span class="badge bg-success rounded-pill">150 Leads</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                SEO Campaign <span class="badge bg-warning rounded-pill">70 Leads</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card chart-card p-4">
+            <h6 class="mb-3">Campaign Reach</h6>
+            <div class="chart-placeholder text-center py-5">[Chart]</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

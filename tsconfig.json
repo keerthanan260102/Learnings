@@ -7,13 +7,17 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "paths": {
+      "my-plugin": ["./dist/my-plugin"]
+    },
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "ESNext",
+    "moduleResolution": "node"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -21,5 +25,25 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/my-plugin/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/my-plugin/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/test/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/test/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/test/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/test/tsconfig.spec.json"
+    }
+  ]
 }
